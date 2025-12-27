@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>The Connector Guestbook</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Connect with Us</h1>
+        
+        <form action="/add" method="POST" class="guest-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <select name="purpose">
+                <option value="General">General Inquiry</option>
+                <option value="Business">Business Meeting</option>
+                <option value="Feedback">Feedback</option>
+            </select>
+            <textarea name="message" placeholder="Leave a message..." required></textarea>
+            <button type="submit">Sign Guestbook</button>
+        </form>
+
+        <hr>
+
+        <h2>Receptionist Log</h2>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Purpose</th>
+                <th>Message</th>
+            </tr>
+            {% for entry in entries %}
+            <tr>
+                <td>{{ entry.name }}</td>
+                <td><span class="badge">{{ entry.purpose }}</span></td>
+                <td>{{ entry.message }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>

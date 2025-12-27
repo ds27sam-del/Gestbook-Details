@@ -1,0 +1,90 @@
+body { 
+    font-family: 'Segoe UI', sans-serif; 
+    background: #f4f7f6; 
+    color: #333; 
+    margin: 0; /* Prevents tiny gaps on mobile edges */
+    padding: 10px;
+}
+
+.container { 
+    max-width: 600px; 
+    margin: 20px auto; /* Reduced top margin for mobile */
+    background: white; 
+    padding: 30px; 
+    border-radius: 12px; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+}
+
+h1 { 
+    text-align: center; 
+    color: #2c3e50; 
+}
+
+.guest-form input, .guest-form select, .guest-form textarea {
+    width: 100%; 
+    padding: 10px; 
+    margin: 10px 0; 
+    border: 1px solid #ddd; 
+    border-radius: 5px;
+    box-sizing: border-box; /* Crucial: Keeps padding inside the width */
+}
+
+button { 
+    width: 100%; 
+    background: #3498db; 
+    color: white; 
+    padding: 12px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+
+button:hover { 
+    background: #2980b9; 
+}
+
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 20px; 
+}
+
+th, td { 
+    padding: 12px; 
+    text-align: left; 
+    border-bottom: 1px solid #eee; 
+}
+
+.badge { 
+    background: #e8f4fd; 
+    color: #3498db; 
+    padding: 4px 8px; 
+    border-radius: 4px; 
+    font-size: 0.8em; 
+}
+
+/* --- RESPONSIVE MEDIA QUERIES --- */
+
+/* For screens smaller than 600px (Phones) */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px; /* Less padding to save space */
+        margin: 10px auto;
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Smaller title */
+    }
+
+    /* Make the table scrollable horizontally so it doesn't break the layout */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    th, td {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+}
