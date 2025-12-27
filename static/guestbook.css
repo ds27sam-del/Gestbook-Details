@@ -1,0 +1,24 @@
+*{box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+body{background:#f4f7f8;color:#333;margin:0;padding:20px}
+.container{max-width:900px;margin:0 auto;background:#fff;padding:20px;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+header h1{margin:0;font-size:28px}
+.form-section{margin-top:16px}
+.form-section form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.form-section label{grid-column:span 2;font-size:13px;color:#555}
+.form-section input,.form-section textarea{grid-column:span 2;padding:8px;border:1px solid #ddd;border-radius:4px}
+.form-section button{grid-column:span 2;padding:10px;background:#007bff;color:#fff;border:none;border-radius:4px;cursor:pointer}
+.list-section{margin-top:24px}
+.entries{list-style:none;padding:0;margin:0}
+.entry{padding:12px;border-bottom:1px solid #eee}
+.entry .meta{display:flex;justify-content:space-between;align-items:center}
+.entry .meta .time{font-size:12px;color:#888}
+.entry .message{margin-top:6px;white-space:pre-wrap}
+.actions{margin-top:8px}
+.actions a.edit{margin-right:8px;color:#007bff;text-decoration:none}
+.actions button.delete{background:#e74c3c;color:#fff;border:none;padding:6px 10px;border-radius:4px;cursor:pointer}
+.flashes{margin-top:10px}
+.flash{padding:8px;border-radius:4px}
+.flash.success{background:#e6ffed;border:1px solid #b8f0c6;color:#0b6f2f}
+.flash.error{background:#ffeceb;border:1px solid #ffbdbd;color:#8b1e1e}
+.cancel{margin-left:8px;color:#555;text-decoration:none}
+@media(max-width:600px){.form-section form{grid-template-columns:1fr}}
